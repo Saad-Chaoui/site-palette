@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Palette</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Site Palette</h1>
+      <button id="extract-btn">Extract Colors</button>
+    </header>
+    
+    <div class="loader-container">
+      <div class="loader" id="loader"></div>
+      <p id="status-message">Extracting colors...</p>
+    </div>
+    
+    <div id="no-colors-message" class="message hidden">
+      <p>No colors found on this page. Try scrolling through the page and extract again.</p>
+    </div>
+    
+    <main>
+      <div id="palette-container">
+        <!-- Color palette items will be inserted here -->
+      </div>
+      
+      <div class="controls">
+        <div class="format-selector">
+          <label for="color-format">Format</label>
+          <select id="color-format">
+            <option value="hex">HEX</option>
+            <option value="rgb">RGB</option>
+            <option value="hsl">HSL</option>
+          </select>
+        </div>
+        
+        <div class="control-buttons">
+          <button id="save-palette" class="control-btn">Save Palette</button>
+          <button id="export-palette" class="control-btn">Export</button>
+        </div>
+      </div>
+      
+      <div id="color-relationships" class="hidden">
+        <h2>Color Relationships</h2>
+        <div id="relationships-container">
+          <!-- Color relationships will be displayed here -->
+        </div>
+      </div>
+      
+      <div id="saved-palettes-section" class="hidden">
+        <h2>Saved Palettes</h2>
+        <div id="saved-palettes-container">
+          <!-- Saved palettes will be displayed here -->
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Site Palette &copy; 2023 by <a href="https://github.com/Saad-Chaoui" target="_blank">Saad Chaoui</a></p>
+    </footer>
+  </div>
+
+  <div id="export-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Export Palette</h2>
+      <div class="export-options">
+        <button data-format="json">JSON</button>
+        <button data-format="css">CSS Variables</button>
+        <button data-format="scss">SCSS Variables</button>
+      </div>
+      <textarea id="export-output" readonly></textarea>
+      <button id="copy-export">Copy to Clipboard</button>
+    </div>
+  </div>
+
+  <template id="color-item-template">
+    <div class="color-item">
+      <div class="color-swatch"></div>
+      <div class="color-info">
+        <span class="color-code"></span>
+        <button class="copy-btn">Copy</button>
+      </div>
+    </div>
+  </template>
+
+  <script src="popup.js"></script>
+</body>
+</html> 

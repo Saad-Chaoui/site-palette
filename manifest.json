@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Site Palette",
+  "version": "1.0",
+  "description": "Extract and analyze color palettes from any webpage",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.jpg",
+      "48": "images/icon48.jpg",
+      "128": "images/icon128.jpg"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "images/icon16.jpg",
+    "48": "images/icon48.jpg",
+    "128": "images/icon128.jpg"
+  }
+} 

@@ -1,0 +1,18 @@
+Please replace these placeholder files with actual icons for your extension:
+
+- icon16.png (16x16 pixels)
+- icon48.png (48x48 pixels)
+- icon128.png (128x128 pixels)
+
+You can create these icons using any image editor, such as:
+- Adobe Illustrator
+- Photoshop
+- GIMP
+- Figma
+- Canva
+
+Suggested icon design:
+- Use a color palette or color wheel theme
+- Keep it simple and recognizable at small sizes
+- Use the primary color scheme from popup.css (#3a86ff blue as the main color)
+- Make sure it's visually distinctive in the browser toolbar 
