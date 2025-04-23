@@ -22,12 +22,6 @@
 - **🎯 One-Click Copy** - Easily copy any color with a single click
 - **🖥️ Modern UI** - Clean, intuitive interface with smooth animations
 
-## 📸 Screenshots
-
-<div align="center">
-  <p><em>Screenshots will be added here</em></p>
-</div>
-
 ## 🚀 Installation
 
 ### Chrome Web Store (Coming Soon)
